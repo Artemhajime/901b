@@ -1,8 +1,4 @@
-#
-# TABLE STRUCTURE FOR: Magazin
-#
-
-DROP TABLE IF EXISTS `Magazin`;
+use sitilink;
 
 CREATE TABLE `Magazin` (
   `id_Magazina` int(11) NOT NULL,
@@ -22,12 +18,115 @@ INSERT INTO `Magazin` (`id_Magazina`, `grafik`, `adres`) VALUES (8, '08:00:00', 
 INSERT INTO `Magazin` (`id_Magazina`, `grafik`, `adres`) VALUES (9, '08:00:00', '85628 Lueilwitz River\nPort Carissa, NE 14915');
 INSERT INTO `Magazin` (`id_Magazina`, `grafik`, `adres`) VALUES (10, '09:00:00', '91553 Jazlyn Park\nLake Ole, MS 58516');
 
+CREATE TABLE `Users` (
+  `id_users` int(11) NOT NULL AUTO_INCREMENT,
+  `login` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `password` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  PRIMARY KEY (`id_users`),
+  UNIQUE KEY `login_UNIQUE` (`login`),
+  UNIQUE KEY `password_UNIQUE` (`password`)
+) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-#
-# TABLE STRUCTURE FOR: Profile
-#
-
-DROP TABLE IF EXISTS `Profile`;
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (1, '89472910340', '2857902087');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (2, '89605018099', '1634428938');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (3, '89911102789', '568858695');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (4, '89147935738', '7791247630');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (5, '89298770402', '4458346918');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (6, '89909928148', '923430179');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (7, '89586148793', '5080689989');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (8, '89174856474', '8276358202');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (9, '89923036906', '9104096451');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (10, '89518720424', '4313678207');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (11, '89120469484', '299019401');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (12, '89663658495', '533722998');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (13, '89166012974', '4820740614');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (14, '89605271277', '2299836793');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (15, '89189599151', '5379167064');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (16, '89546542514', '277067266');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (17, '89721269738', '3979162211');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (18, '89278196021', '7109563291');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (19, '89586748925', '8422886085');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (20, '89225549097', '314046374');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (21, '89718781823', '8750712645');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (22, '89914648631', '2177883450');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (23, '89448525959', '5916121655');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (24, '89636579947', '818791831');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (25, '89195936471', '9426792306');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (26, '89491504712', '378618921');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (27, '89888907242', '4768965239');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (28, '89149384517', '6428654149');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (29, '89905237949', '3701856195');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (30, '89335131943', '3474848153');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (31, '89622315327', '1044199476');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (32, '89517227149', '7281351169');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (33, '89339593512', '6314835622');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (34, '89781426609', '5508535233');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (35, '89948242750', '1209301173');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (36, '89098317688', '6525736520');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (37, '89120341731', '9710773803');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (38, '89179472703', '9756333863');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (39, '89915515010', '4001623581');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (40, '89109069578', '8727672876');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (41, '89439635214', '5826345259');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (42, '89738494992', '2254033609');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (43, '89276374354', '8591124573');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (44, '89317776677', '5469867226');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (45, '89499687102', '1661020034');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (46, '89430117384', '9917599342');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (47, '89637848466', '5516999952');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (48, '89584485029', '9743420435');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (49, '89230550213', '176008270');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (50, '89577687039', '240230033');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (51, '89545769650', '1083767245');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (52, '89153410579', '922913333');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (53, '89121060395', '3145009847');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (54, '89579225630', '6324333789');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (55, '89239730319', '6655879721');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (56, '89236720525', '7452943775');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (57, '89931159452', '8250533997');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (58, '89928039786', '9363137269');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (59, '89151787675', '1286189538');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (60, '89592148027', '9402000193');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (61, '89985989759', '6945901841');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (62, '89101146114', '2918925668');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (63, '89617031397', '9598005966');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (64, '89504394831', '6350445545');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (65, '89170061166', '9829124053');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (66, '89742648431', '1485218598');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (67, '89774349960', '3483154475');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (68, '89866269319', '4421178177');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (69, '89384646900', '4856396546');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (70, '89222458108', '9095782347');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (71, '89591076903', '6207243096');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (72, '89793166956', '7627307964');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (73, '89301068260', '7489604568');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (74, '89704280214', '5179819183');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (75, '89655231937', '1599585891');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (76, '89347821345', '8212383324');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (77, '89980811662', '8301345992');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (78, '89427485534', '8462938000');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (79, '89161742975', '799808175');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (80, '89384136280', '961552333');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (81, '89971954316', '3292061367');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (82, '89443976758', '2488590749');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (83, '89620705033', '1089469854');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (84, '89868372145', '9591474834');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (85, '89539372401', '5349888067');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (86, '89897233900', '8580166409');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (87, '89947052083', '764699755');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (88, '89582092824', '9132064517');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (89, '89122691256', '2964325514');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (90, '89762570740', '4547279113');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (91, '89263443305', '654094043');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (92, '89715100435', '3041936098');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (93, '89742011919', '9576597665');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (94, '89386689712', '7864486368');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (95, '89751916968', '1911376178');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (96, '89870183432', '4814790851');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (97, '89074296798', '5131936522');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (98, '89020227917', '8687733570');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (99, '89583708073', '6483916564');
+INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (100, '89208822920', '1281854896');
 
 CREATE TABLE `Profile` (
   `id_profile` int(11) NOT NULL AUTO_INCREMENT,
@@ -143,12 +242,16 @@ INSERT INTO `Profile` (`id_profile`, `FIO`, `tel`, `birthday`, `adress`, `id_use
 INSERT INTO `Profile` (`id_profile`, `FIO`, `tel`, `birthday`, `adress`, `id_users`, `email`) VALUES (99, 'Maria Auer', '89650141291', '1997-05-09', '822 Geraldine Fort Apt. 826\nEzekielberg, TX 4', 57, 'demario.nicolas@example.net');
 INSERT INTO `Profile` (`id_profile`, `FIO`, `tel`, `birthday`, `adress`, `id_users`, `email`) VALUES (100, 'Mr. Fermin Collins', '89397075811', '2007-09-03', '30638 Marilie Harbor Apt. 947\nWest Clementton', 46, 'marina56@example.com');
 
+CREATE TABLE `doljnoctii` (
+  `id_Doljnosti` int(11) NOT NULL,
+  `Nazvanie_doljnosti` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  PRIMARY KEY (`id_Doljnosti`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-#
-# TABLE STRUCTURE FOR: Sotrudniki
-#
-
-DROP TABLE IF EXISTS `Sotrudniki`;
+INSERT INTO `doljnoctii` (`id_Doljnosti`, `Nazvanie_doljnosti`) VALUES (1, ' yborshik');
+INSERT INTO `doljnoctii` (`id_Doljnosti`, `Nazvanie_doljnosti`) VALUES (2, ' konsultant');
+INSERT INTO `doljnoctii` (`id_Doljnosti`, `Nazvanie_doljnosti`) VALUES (3, ' menedjer');
+INSERT INTO `doljnoctii` (`id_Doljnosti`, `Nazvanie_doljnosti`) VALUES (4, 'kassir');
 
 CREATE TABLE `Sotrudniki` (
   `id_Sotrudnika` int(11) NOT NULL,
@@ -179,130 +282,6 @@ INSERT INTO `Sotrudniki` (`id_Sotrudnika`, `FIO`, `tel`, `birthday`, `id_Magazin
 INSERT INTO `Sotrudniki` (`id_Sotrudnika`, `FIO`, `tel`, `birthday`, `id_Magazina`, `id_Doljnosti`) VALUES (13, 'Tyson Connelly', '89161337910', '1984-09-03', 9, 1);
 INSERT INTO `Sotrudniki` (`id_Sotrudnika`, `FIO`, `tel`, `birthday`, `id_Magazina`, `id_Doljnosti`) VALUES (14, 'Dr. Kyra Howe', '89012171821', '2007-01-31', 4, 4);
 INSERT INTO `Sotrudniki` (`id_Sotrudnika`, `FIO`, `tel`, `birthday`, `id_Magazina`, `id_Doljnosti`) VALUES (15, 'Tabitha Koepp', '89310903281', '2016-09-03', 6, 2);
-
-
-#
-# TABLE STRUCTURE FOR: Users
-#
-
-DROP TABLE IF EXISTS `Users`;
-
-CREATE TABLE `Users` (
-  `id_users` int(11) NOT NULL AUTO_INCREMENT,
-  `login` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `password` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  PRIMARY KEY (`id_users`),
-  UNIQUE KEY `login_UNIQUE` (`login`),
-  UNIQUE KEY `password_UNIQUE` (`password`)
-) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (1, '89472910340', '2857902087');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (2, '89605018099', '1634428938');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (3, '89911102789', '568858695');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (4, '89147935738', '7791247630');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (5, '89298770402', '4458346918');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (6, '89909928148', '923430179');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (7, '89586148793', '5080689989');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (8, '89174856474', '8276358202');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (9, '89923036906', '9104096451');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (10, '89518720424', '4313678207');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (11, '89120469484', '299019401');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (12, '89663658495', '533722998');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (13, '89166012974', '4820740614');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (14, '89605271277', '2299836793');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (15, '89189599151', '5379167064');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (16, '89546542514', '277067266');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (17, '89721269738', '3979162211');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (18, '89278196021', '7109563291');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (19, '89586748925', '8422886085');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (20, '89225549097', '314046374');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (21, '89718781823', '8750712645');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (22, '89914648631', '2177883450');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (23, '89448525959', '5916121655');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (24, '89636579947', '818791831');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (25, '89195936471', '9426792306');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (26, '89491504712', '378618921');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (27, '89888907242', '4768965239');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (28, '89149384517', '6428654149');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (29, '89905237949', '3701856195');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (30, '89335131943', '3474848153');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (31, '89622315327', '1044199476');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (32, '89517227149', '7281351169');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (33, '89339593512', '6314835622');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (34, '89781426609', '5508535233');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (35, '89948242750', '1209301173');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (36, '89098317688', '6525736520');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (37, '89120341731', '9710773803');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (38, '89179472703', '9756333863');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (39, '89915515010', '4001623581');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (40, '89109069578', '8727672876');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (41, '89439635214', '5826345259');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (42, '89738494992', '2254033609');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (43, '89276374354', '8591124573');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (44, '89317776677', '5469867226');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (45, '89499687102', '1661020034');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (46, '89430117384', '9917599342');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (47, '89637848466', '5516999952');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (48, '89584485029', '9743420435');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (49, '89230550213', '176008270');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (50, '89577687039', '240230033');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (51, '89545769650', '1083767245');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (52, '89153410579', '922913333');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (53, '89121060395', '3145009847');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (54, '89579225630', '6324333789');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (55, '89239730319', '6655879721');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (56, '89236720525', '7452943775');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (57, '89931159452', '8250533997');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (58, '89928039786', '9363137269');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (59, '89151787675', '1286189538');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (60, '89592148027', '9402000193');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (61, '89985989759', '6945901841');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (62, '89101146114', '2918925668');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (63, '89617031397', '9598005966');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (64, '89504394831', '6350445545');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (65, '89170061166', '9829124053');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (66, '89742648431', '1485218598');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (67, '89774349960', '3483154475');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (68, '89866269319', '4421178177');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (69, '89384646900', '4856396546');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (70, '89222458108', '9095782347');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (71, '89591076903', '6207243096');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (72, '89793166956', '7627307964');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (73, '89301068260', '7489604568');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (74, '89704280214', '5179819183');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (75, '89655231937', '1599585891');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (76, '89347821345', '8212383324');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (77, '89980811662', '8301345992');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (78, '89427485534', '8462938000');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (79, '89161742975', '799808175');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (80, '89384136280', '961552333');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (81, '89971954316', '3292061367');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (82, '89443976758', '2488590749');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (83, '89620705033', '1089469854');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (84, '89868372145', '9591474834');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (85, '89539372401', '5349888067');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (86, '89897233900', '8580166409');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (87, '89947052083', '764699755');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (88, '89582092824', '9132064517');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (89, '89122691256', '2964325514');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (90, '89762570740', '4547279113');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (91, '89263443305', '654094043');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (92, '89715100435', '3041936098');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (93, '89742011919', '9576597665');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (94, '89386689712', '7864486368');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (95, '89751916968', '1911376178');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (96, '89870183432', '4814790851');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (97, '89074296798', '5131936522');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (98, '89020227917', '8687733570');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (99, '89583708073', '6483916564');
-INSERT INTO `Users` (`id_users`, `login`, `password`) VALUES (100, '89208822920', '1281854896');
-
-
-#
-# TABLE STRUCTURE FOR: Zakaz
-#
-
-DROP TABLE IF EXISTS `Zakaz`;
 
 CREATE TABLE `Zakaz` (
   `id_Zakaza` int(11) NOT NULL,
@@ -419,131 +398,6 @@ INSERT INTO `Zakaz` (`id_Zakaza`, `nomer_zakaza`, `adres`, `data_zakaza`, `id_us
 INSERT INTO `Zakaz` (`id_Zakaza`, `nomer_zakaza`, `adres`, `data_zakaza`, `id_users`, `id_Magazina`) VALUES (99, '275', '102 Vandervort Plains\nMillerport, AL 66366-91', '1971-05-07', 10, 10);
 INSERT INTO `Zakaz` (`id_Zakaza`, `nomer_zakaza`, `adres`, `data_zakaza`, `id_users`, `id_Magazina`) VALUES (100, '446', '8369 Heloise Lock Suite 794\nStreichborough, O', '2001-12-15', 77, 7);
 
-
-#
-# TABLE STRUCTURE FOR: Zakaz_has_tovars
-#
-
-DROP TABLE IF EXISTS `Zakaz_has_tovars`;
-
-CREATE TABLE `Zakaz_has_tovars` (
-  `id_Zakaza` int(11) NOT NULL,
-  `id_tovara` int(11) NOT NULL,
-  PRIMARY KEY (`id_Zakaza`,`id_tovara`),
-  KEY `fk_Zakaz_has_tovars_tovars1_idx` (`id_tovara`),
-  KEY `fk_Zakaz_has_tovars_Zakaz1_idx` (`id_Zakaza`),
-  CONSTRAINT `fk_Zakaz_has_tovars_Zakaz1` FOREIGN KEY (`id_Zakaza`) REFERENCES `Zakaz` (`id_Zakaza`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Zakaz_has_tovars_tovars1` FOREIGN KEY (`id_tovara`) REFERENCES `tovars` (`id_tovara`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (1, 1);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (2, 2);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (3, 3);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (4, 4);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (5, 5);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (6, 6);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (7, 7);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (8, 8);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (9, 9);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (10, 10);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (11, 11);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (12, 12);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (13, 13);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (14, 14);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (15, 15);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (16, 16);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (17, 17);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (18, 18);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (19, 19);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (20, 20);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (21, 21);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (22, 22);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (23, 23);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (24, 24);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (25, 25);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (26, 26);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (27, 27);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (28, 28);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (29, 29);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (30, 30);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (31, 31);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (32, 32);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (33, 33);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (34, 34);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (35, 35);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (36, 36);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (37, 37);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (38, 38);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (39, 39);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (40, 40);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (41, 41);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (42, 42);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (43, 43);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (44, 44);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (45, 45);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (46, 46);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (47, 47);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (48, 48);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (49, 49);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (50, 50);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (51, 51);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (52, 52);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (53, 53);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (54, 54);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (55, 55);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (56, 56);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (57, 57);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (58, 58);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (59, 59);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (60, 60);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (61, 61);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (62, 62);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (63, 63);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (64, 64);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (65, 65);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (66, 66);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (67, 67);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (68, 68);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (69, 69);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (70, 70);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (71, 71);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (72, 72);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (73, 73);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (74, 74);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (75, 75);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (76, 76);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (77, 77);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (78, 78);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (79, 79);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (80, 80);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (81, 81);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (82, 82);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (83, 83);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (84, 84);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (85, 85);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (86, 86);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (87, 87);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (88, 88);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (89, 89);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (90, 90);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (91, 91);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (92, 92);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (93, 93);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (94, 94);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (95, 95);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (96, 96);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (97, 97);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (98, 98);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (99, 99);
-INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (100, 100);
-
-
-#
-# TABLE STRUCTURE FOR: categorias_dostavki
-#
-
-DROP TABLE IF EXISTS `categorias_dostavki`;
-
 CREATE TABLE `categorias_dostavki` (
   `id_categorias_dostavki` int(11) NOT NULL,
   `categoria_dostavki` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -552,13 +406,6 @@ CREATE TABLE `categorias_dostavki` (
 
 INSERT INTO `categorias_dostavki` (`id_categorias_dostavki`, `categoria_dostavki`) VALUES (1, ' standart');
 INSERT INTO `categorias_dostavki` (`id_categorias_dostavki`, `categoria_dostavki`) VALUES (2, 'express');
-
-
-#
-# TABLE STRUCTURE FOR: categorias_tovars
-#
-
-DROP TABLE IF EXISTS `categorias_tovars`;
 
 CREATE TABLE `categorias_tovars` (
   `id_careporias_tovars` int(11) NOT NULL,
@@ -571,31 +418,6 @@ INSERT INTO `categorias_tovars` (`id_careporias_tovars`, `categoria_tovars`) VAL
 INSERT INTO `categorias_tovars` (`id_careporias_tovars`, `categoria_tovars`) VALUES (3, ' car products');
 INSERT INTO `categorias_tovars` (`id_careporias_tovars`, `categoria_tovars`) VALUES (4, 'laptop');
 INSERT INTO `categorias_tovars` (`id_careporias_tovars`, `categoria_tovars`) VALUES (5, ' garden equipment');
-
-
-#
-# TABLE STRUCTURE FOR: doljnoctii
-#
-
-DROP TABLE IF EXISTS `doljnoctii`;
-
-CREATE TABLE `doljnoctii` (
-  `id_Doljnosti` int(11) NOT NULL,
-  `Nazvanie_doljnosti` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
-  PRIMARY KEY (`id_Doljnosti`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
-INSERT INTO `doljnoctii` (`id_Doljnosti`, `Nazvanie_doljnosti`) VALUES (1, ' yborshik');
-INSERT INTO `doljnoctii` (`id_Doljnosti`, `Nazvanie_doljnosti`) VALUES (2, ' konsultant');
-INSERT INTO `doljnoctii` (`id_Doljnosti`, `Nazvanie_doljnosti`) VALUES (3, ' menedjer');
-INSERT INTO `doljnoctii` (`id_Doljnosti`, `Nazvanie_doljnosti`) VALUES (4, 'kassir');
-
-
-#
-# TABLE STRUCTURE FOR: dostavka
-#
-
-DROP TABLE IF EXISTS `dostavka`;
 
 CREATE TABLE `dostavka` (
   `id_dostavki` int(11) NOT NULL,
@@ -711,13 +533,6 @@ INSERT INTO `dostavka` (`id_dostavki`, `data_dostavki`, `adres`, `id_Zakaza`, `i
 INSERT INTO `dostavka` (`id_dostavki`, `data_dostavki`, `adres`, `id_Zakaza`, `id_categorias_dostavki`) VALUES (99, '1995-11-17', '96626 Wilderman Garden\nNienowville, AL 45464-', 98, 2);
 INSERT INTO `dostavka` (`id_dostavki`, `data_dostavki`, `adres`, `id_Zakaza`, `id_categorias_dostavki`) VALUES (100, '2003-09-02', '0655 Collins Springs Suite 392\nKertzmannbury,', 5, 1);
 
-
-#
-# TABLE STRUCTURE FOR: tovars
-#
-
-DROP TABLE IF EXISTS `tovars`;
-
 CREATE TABLE `tovars` (
   `id_tovara` int(11) NOT NULL,
   `artikul` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
@@ -829,4 +644,114 @@ INSERT INTO `tovars` (`id_tovara`, `artikul`, `cena`, `id_careporias_tovars`) VA
 INSERT INTO `tovars` (`id_tovara`, `artikul`, `cena`, `id_careporias_tovars`) VALUES (99, '326611557928', '9139', 3);
 INSERT INTO `tovars` (`id_tovara`, `artikul`, `cena`, `id_careporias_tovars`) VALUES (100, '224973146570', '17150', 2);
 
+CREATE TABLE `Zakaz_has_tovars` (
+  `id_Zakaza` int(11) NOT NULL,
+  `id_tovara` int(11) NOT NULL,
+  PRIMARY KEY (`id_Zakaza`,`id_tovara`),
+  KEY `fk_Zakaz_has_tovars_tovars1_idx` (`id_tovara`),
+  KEY `fk_Zakaz_has_tovars_Zakaz1_idx` (`id_Zakaza`),
+  CONSTRAINT `fk_Zakaz_has_tovars_Zakaz1` FOREIGN KEY (`id_Zakaza`) REFERENCES `Zakaz` (`id_Zakaza`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Zakaz_has_tovars_tovars1` FOREIGN KEY (`id_tovara`) REFERENCES `tovars` (`id_tovara`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (1, 1);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (2, 2);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (3, 3);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (4, 4);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (5, 5);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (6, 6);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (7, 7);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (8, 8);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (9, 9);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (10, 10);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (11, 11);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (12, 12);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (13, 13);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (14, 14);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (15, 15);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (16, 16);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (17, 17);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (18, 18);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (19, 19);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (20, 20);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (21, 21);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (22, 22);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (23, 23);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (24, 24);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (25, 25);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (26, 26);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (27, 27);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (28, 28);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (29, 29);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (30, 30);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (31, 31);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (32, 32);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (33, 33);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (34, 34);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (35, 35);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (36, 36);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (37, 37);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (38, 38);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (39, 39);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (40, 40);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (41, 41);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (42, 42);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (43, 43);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (44, 44);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (45, 45);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (46, 46);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (47, 47);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (48, 48);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (49, 49);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (50, 50);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (51, 51);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (52, 52);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (53, 53);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (54, 54);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (55, 55);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (56, 56);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (57, 57);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (58, 58);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (59, 59);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (60, 60);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (61, 61);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (62, 62);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (63, 63);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (64, 64);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (65, 65);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (66, 66);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (67, 67);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (68, 68);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (69, 69);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (70, 70);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (71, 71);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (72, 72);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (73, 73);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (74, 74);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (75, 75);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (76, 76);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (77, 77);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (78, 78);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (79, 79);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (80, 80);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (81, 81);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (82, 82);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (83, 83);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (84, 84);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (85, 85);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (86, 86);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (87, 87);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (88, 88);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (89, 89);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (90, 90);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (91, 91);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (92, 92);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (93, 93);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (94, 94);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (95, 95);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (96, 96);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (97, 97);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (98, 98);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (99, 99);
+INSERT INTO `Zakaz_has_tovars` (`id_Zakaza`, `id_tovara`) VALUES (100, 100);
 
