@@ -6,36 +6,43 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Data;
 
 namespace sudoku
 {
     public partial class Form1 : Form
     {
+        private SqlConnection sqlConnection = null;
+        private SqlDataAdapter adapter = null;
+        private DataTable table = null;
+
+        DateTime date;
         const int n = 3;
         const int sizeButton = 50;
         public int[,] map = new int [n * n, n * n];
         public Button[,] buttons = new Button[n * n, n * n];
         public Form1()
         {
-            InitializeComponent();
-
-            timer1.Interval = 500;
-            m = 0;
-            s = 0;
-
-            label2.Text = "00";
-            label3.Text = ":";
-
-            label4.Text = "00";
+            InitializeComponent();                       
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            GenerateMap();
+            sqlConnection = new SqlConnection(@"Data Source=DESKTOP-KMH1PLQ;Initial Catalog=sudoku;Integrated Security=True");
+
+            sqlConnection.Open();
+
+            adapter = new SqlDataAdapter("SELECT TOP(10) * FROM users order by Date", sqlConnection);
+
+            table = new DataTable();
         }
         public void GenerateMap()
         {
+            label1.Visible = true;
+            label7.Visible = true;
+
             for (int i = 0; i < n * n; i++)
             {
                 for (int j = 0; j < n * n; j++)
@@ -54,9 +61,10 @@ namespace sudoku
             {
                 ShuffleMap(r.Next(0, 5));
             }
-
+            
             CreateMap();
             HideCells();
+            //sqlconnection();
         }
 
         public void HideCells()
@@ -203,8 +211,7 @@ namespace sudoku
         }
 
         public void CreateMap()
-        {
-            timer1.Enabled = true;
+        {           
             for (int i = 0; i < n * n; i++)
             {
                 for (int j = 0; j < n * n; j++)
@@ -247,68 +254,136 @@ namespace sudoku
                     var btnText = buttons[i, j].Text;
                     if (btnText != map[i, j].ToString())
                     {
-                        MessageBox.Show("Неверно!");
+                        MessageBox.Show("Неверно! ");
+                        //string connectionString = @"Data Source=DESKTOP-KMH1PLQ;Initial Catalog=sudoku;Integrated Security=True";
+                        //using (SqlConnection conn = new SqlConnection(connectionString))
+                        //{
+                        //    conn.Open();
+                        //    SqlCommand command = new SqlCommand("INSERT INTO users (Name,Date) values (@Name,@Date)");
+                        //    command.Connection = conn;
+                        //    //command.Parameters.AddWithValue("Id_users", textBox1.Text);
+                        //    command.Parameters.AddWithValue("Name", textBox2.Text);
+                        //    command.Parameters.AddWithValue("Date", label7.Text);
+                        //    command.ExecuteNonQuery();
+                        //dataGridView1.Visible = true;
+                        //label7.Visible = false;
+                        //label1.Visible = false;
+                        //button3.Visible = true;
+                        //panel1.Visible = true;
+                        //this.Size = new System.Drawing.Size(445, 385);
+                        //}
+
                         return;
                     }
                 }
             }
-            MessageBox.Show("Верно!");
-            for(int i = 0; i < n * n; i++)
+            MessageBox.Show("Верно!" + textBox2.Text + " ваш результат: " + label7.Text);
+            string connectionString = @"Data Source=DESKTOP-KMH1PLQ;Initial Catalog=sudoku;Integrated Security=True";
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand("INSERT INTO users (Name,Date) values (@Name,@Date)");
+                command.Connection = conn;
+                command.Parameters.AddWithValue("Name", textBox2.Text);
+                command.Parameters.AddWithValue("Date", label7.Text);
+                command.ExecuteNonQuery();
+            }
+            label7.Visible = false;
+            label1.Visible = false;
+            dataGridView1.Visible = true;
+            button3.Visible = true;
+            panel1.Visible = true;
+            this.Size = new System.Drawing.Size(445, 385);
+            for (int i = 0; i < n * n; i++)
             {
                 for (int j = 0; j < n * n; j++)
                 {
                     this.Controls.Remove(buttons[i, j]);
                 }
-            }
-            GenerateMap();
+            }            
+                GenerateMap();
         }
         
 
         private void label1_Click(object sender, EventArgs e)
-        {}
-        int m, s;
+        {}      
         
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (label3.Visible)
-            {
-                if (s < 59)
-                {
-                    s++;
-                    if (s < 10)
-                        label4.Text = "0" + s.ToString();
-                    else
-                        label4.Text = s.ToString();
-                }
-                else
-                {
-                    if (m < 59)
-                    {
-                        m++;
-                        if (m < 10)
-                            label2.Text = "0" + m.ToString();
-                        else
-                            label2.Text = m.ToString();
-                        s = 0;
-                        label4.Text = "00";
-                    }
-                    else
-                    {
-                        m = 0;
-                        label2.Text = "00";
-                    }
-                }
-                label3.Visible = false;
-            }
-            else
-            { 
-                              
-              label3.Visible = true;  
             
-            }           
+            
+        }
+        //public void sqlconnection()
+        //{
+        //    string connectionString = @"Data Source=DESKTOP-KMH1PLQ;Initial Catalog=sudoku;Integrated Security=True";
+        //    using (SqlConnection connection = new SqlConnection(connectionString))
+        //    {
+        //        connection.Open();
+        //        MessageBox.Show("Подключение открыто");
+        //    }
+        //    MessageBox.Show("Подключение закрыто...");
+        //}
+        private void tickTimer(object sender, EventArgs e)
+        {            
+            long tick = DateTime.Now.Ticks - date.Ticks;
+            DateTime stopWatch = new DateTime();
+
+            stopWatch = stopWatch.AddTicks(tick);
+            label7.Text = String.Format("{0:HH:mm:ss}", stopWatch);
+
         }
 
+        private void label5_Click(object sender, EventArgs e)
+        {}
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {}
+
         private void label2_Click(object sender, EventArgs e)
+        {}
+
+        private void button2_Click(object sender, EventArgs e)
+        {            
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            textBox1.Text = "1";
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {           
+            this.Size = new System.Drawing.Size(467, 527);
+            label2.Visible = false;
+            button2.Visible = false;
+            textBox2.Visible = false;
+            button1.Visible = true;
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "sudokuDataSet.users". При необходимости она может быть перемещена или удалена.
+            this.usersTableAdapter.Fill(this.sudokuDataSet.users);
+
+            date = DateTime.Now;
+
+            Timer timer = new Timer();
+            timer.Interval = 1;
+            timer.Tick += new EventHandler(tickTimer);
+            timer.Start();
+
+            GenerateMap();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            label7.Visible = false;
+            label1.Visible = false;
+            dataGridView1.Visible = true;
+            table.Clear();
+
+            adapter.Fill(table);
+
+            dataGridView1.DataSource = table;                                      
+        }
+
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
